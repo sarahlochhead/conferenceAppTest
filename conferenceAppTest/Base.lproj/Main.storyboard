@@ -36,16 +36,16 @@
             </objects>
             <point key="canvasLocation" x="-497" y="137"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Schedule View Controller-->
         <scene sceneID="Z4r-6x-oNk">
             <objects>
-                <tableViewController id="Wd9-NW-9cC" sceneMemberID="viewController">
+                <tableViewController id="Wd9-NW-9cC" customClass="ScheduleViewController" customModule="conferenceAppTest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NYw-4Z-Fyv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FPg-Mu-LeV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleCell" id="FPg-Mu-LeV">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPg-Mu-LeV" id="p9F-5A-Jdz">
