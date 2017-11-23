@@ -10,6 +10,8 @@ import UIKit
 
 class ScheduleViewController: UITableViewController {
     
+    var sessionTimes = ["8:30", "9:30", "9:40", "10:00", "10:15", "10:40", "10:45", "11:45", "1:00", "2:00", "3:00", "3:20", "3:30", "4:30"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,14 +36,14 @@ class ScheduleViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return 14
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
         
-        cell.textLabel?.text = "This is Post \(indexPath.row)"
+        cell.textLabel?.text = sessionTimes[indexPath.row]
         
         return cell
     }
