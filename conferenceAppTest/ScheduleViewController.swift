@@ -10,7 +10,13 @@ import UIKit
 
 class ScheduleViewController: UITableViewController {
     
+    var schedules = [sessionTimes(): String()]
+    
     var sessionTimes = ["8:30", "9:30", "9:40", "10:00", "10:15", "10:40", "10:45", "11:45", "1:00", "2:00", "3:00", "3:20", "3:30", "4:30"]
+    
+    
+    
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +26,8 @@ class ScheduleViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+         navigationItem.titleView = UIImageView(image: UIImage(named: "otm-logo-50"))
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,11 +49,13 @@ class ScheduleViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath) as! scheduleCell
         
-        cell.textLabel?.text = sessionTimes[indexPath.row]
-        
+        let schedule = self.schedules[indexPath.row]
+        cell.sessionStart.text = schedule.times
+        cell.sessionTitle.text = schedule.title
         return cell
+        
     }
     
 

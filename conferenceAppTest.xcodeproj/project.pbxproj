@@ -15,6 +15,7 @@
 		2641F49E1FC3DC150049E978 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2641F49C1FC3DC150049E978 /* LaunchScreen.storyboard */; };
 		2641F4A91FC3DC150049E978 /* conferenceAppTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2641F4A81FC3DC150049E978 /* conferenceAppTestTests.swift */; };
 		2641F4B41FC3DC150049E978 /* conferenceAppTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2641F4B31FC3DC150049E978 /* conferenceAppTestUITests.swift */; };
+		267EAC051FDE23D800F1892A /* scheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267EAC041FDE23D800F1892A /* scheduleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2641F4AF1FC3DC150049E978 /* conferenceAppTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = conferenceAppTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2641F4B31FC3DC150049E978 /* conferenceAppTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conferenceAppTestUITests.swift; sourceTree = "<group>"; };
 		2641F4B51FC3DC150049E978 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		267EAC041FDE23D800F1892A /* scheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,6 @@
 		2641F4871FC3DC150049E978 = {
 			isa = PBXGroup;
 			children = (
-				2614C5D41FC53A040008D097 /* ScheduleViewController.swift */,
 				2641F4921FC3DC150049E978 /* conferenceAppTest */,
 				2641F4A71FC3DC150049E978 /* conferenceAppTestTests */,
 				2641F4B21FC3DC150049E978 /* conferenceAppTestUITests */,
@@ -100,9 +101,11 @@
 		2641F4921FC3DC150049E978 /* conferenceAppTest */ = {
 			isa = PBXGroup;
 			children = (
+				2614C5D41FC53A040008D097 /* ScheduleViewController.swift */,
 				2641F4931FC3DC150049E978 /* AppDelegate.swift */,
 				2641F4951FC3DC150049E978 /* ViewController.swift */,
 				2641F4971FC3DC150049E978 /* Main.storyboard */,
+				267EAC041FDE23D800F1892A /* scheduleCell.swift */,
 				2641F49A1FC3DC150049E978 /* Assets.xcassets */,
 				2641F49C1FC3DC150049E978 /* LaunchScreen.storyboard */,
 				2641F49F1FC3DC150049E978 /* Info.plist */,
@@ -264,6 +267,7 @@
 			files = (
 				2614C5D51FC53A040008D097 /* ScheduleViewController.swift in Sources */,
 				2641F4961FC3DC150049E978 /* ViewController.swift in Sources */,
+				267EAC051FDE23D800F1892A /* scheduleCell.swift in Sources */,
 				2641F4941FC3DC150049E978 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1lC-wE-ygY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1lC-wE-ygY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,13 +46,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleCell" id="FPg-Mu-LeV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleCell" id="FPg-Mu-LeV" customClass="scheduleCell" customModule="conferenceAppTest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPg-Mu-LeV" id="p9F-5A-Jdz">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sessionStart" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OU-TW-dCy">
+                                            <rect key="frame" x="16" y="11" width="96" height="21"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sessionTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9c-VS-jkO">
+                                            <rect key="frame" x="142" y="11" width="90" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTr-IG-ACf">
+                                            <rect key="frame" x="337" y="21" width="22" height="22"/>
+                                            <state key="normal" image="expand-arrow-40"/>
+                                            <connections>
+                                                <action selector="expandCell:" destination="FPg-Mu-LeV" eventType="touchUpInside" id="qD7-GC-SGT"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="G9c-VS-jkO" firstAttribute="leading" secondItem="5OU-TW-dCy" secondAttribute="trailing" constant="30" id="5Xe-9K-m8t"/>
+                                        <constraint firstItem="G9c-VS-jkO" firstAttribute="centerY" secondItem="p9F-5A-Jdz" secondAttribute="centerY" id="D16-sI-O2v"/>
+                                        <constraint firstItem="tTr-IG-ACf" firstAttribute="top" secondItem="p9F-5A-Jdz" secondAttribute="top" constant="21" id="DLg-6q-bRo"/>
+                                        <constraint firstItem="G9c-VS-jkO" firstAttribute="centerX" secondItem="p9F-5A-Jdz" secondAttribute="centerX" id="Pmd-de-lQy"/>
+                                        <constraint firstAttribute="bottom" secondItem="tTr-IG-ACf" secondAttribute="bottom" id="faF-sB-yM4"/>
+                                        <constraint firstItem="5OU-TW-dCy" firstAttribute="leading" secondItem="p9F-5A-Jdz" secondAttribute="leadingMargin" id="n8Z-B6-iak"/>
+                                        <constraint firstItem="5OU-TW-dCy" firstAttribute="centerY" secondItem="p9F-5A-Jdz" secondAttribute="centerY" id="xnW-ia-4ip"/>
+                                        <constraint firstAttribute="trailing" secondItem="tTr-IG-ACf" secondAttribute="trailing" constant="16" id="xoo-2X-Z2x"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="scheduleCell" destination="G9c-VS-jkO" id="DK4-Km-FCD"/>
+                                    <outlet property="sessionStart" destination="5OU-TW-dCy" id="6op-qI-cqy"/>
+                                    <outlet property="sessionTitle" destination="G9c-VS-jkO" id="awx-Le-wmr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -59,11 +96,13 @@
                             <outlet property="delegate" destination="Wd9-NW-9cC" id="9eI-r3-w04"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ZCf-De-Yjc"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="P5X-fC-HyP">
+                        <nil key="title"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G06-pf-VfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436" y="135"/>
+            <point key="canvasLocation" x="1436" y="134.48275862068968"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="jaD-KH-a2X">
@@ -191,6 +230,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="expand-arrow-40" width="40" height="40"/>
         <image name="icons8-handshake-heart-50" width="50" height="50"/>
         <image name="icons8-party-50" width="50" height="50"/>
         <image name="icons8-schedule-50" width="50" height="50"/>
